@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t abhishekmadiraju/docker-react-practice .
+  - docker build -t abhishekmadiraju/docker-react-practice -f Dockerfile.dev .
 
 script:
   - docker run -e CI=true abhishekmadiraju/docker-react-practice npm run test -- --coverage
